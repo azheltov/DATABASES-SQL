@@ -193,3 +193,4 @@ SQL Triggers
 	
 	
 SQL Computed Columns
+	(formula) 	(([firstname]+' ')+[lastname])
