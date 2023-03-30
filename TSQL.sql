@@ -194,3 +194,34 @@ SQL Triggers
 	
 SQL Computed Columns
 	(formula) 	(([firstname]+' ')+[lastname])
+	
+STORED PROCEDURES (SP)    \programmability
+	parametorized
+	SP are compiled...
+	rights to edit
+	
+	create procedure MyTestSP
+	as
+	set no count on                           (how many rows affected?)
+	select * from [HR].[shift]
+	
+	---
+	
+	exectue MyTestSP
+	
+	
+	drop proc MyTestSP
+	---
+	create procedure SP
+	@Param_Name varchar(50) = 'Evening' (evening is a default parameter)
+	as
+	set nocount on
+	select * from [HR].[shift]
+	where name = @Param_Name
+	
+	exec SP Param_Nem = 'Day'
+	
+	--OUTPUT PARAMETER
+	
+	
+	
